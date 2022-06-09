@@ -1,0 +1,1212 @@
+/*============
+TABLE OF CONTENTS:
+1.NAVBAR
+2.HEADER
+3.MEET BIOM
+4.HORIZONTAL IMAGES
+5.BIOM DISPENSERS
+6.REVIEWS
+7.BIOM WIPE
+8.VIDEO SECTION
+9.CLEAN WITH BIOM
+10.FOOTER
+==============*/
+
+
+/*FONTS*/
+@font-face {
+  font-family: "Brandon Grotesque, Regular";
+  src: url("fonts/brand_ssv/Brandon_reg.otf");
+}
+
+@font-face {
+  font-family:"Brandon Grotesque, Bold";
+  src: url("fonts/brand_ssv/Brandon_bld.otf");
+}
+
+@font-face {
+  font-family:"Brandon Gotesque, Light";
+  src: url("fonts/brand_ssv/brandon-grotesque-light-58a8a4b38001d.otf");
+}
+
+@font-face {
+  font-family: "Chronicle Display Black";
+  src: url("fonts/chornicle-display-black/ChronicleDisplay-Black.woff")
+}
+/*VARIABLES*/
+:root{
+  --white:#FFFFFF;
+  --whitesmoke:#F2F2F2;
+  --snow:#FFFAFA;
+  --darkslateblack:#002D33;
+  --lightseagreen:#DAE5E5;
+  --darkgreen:#004A4C;
+  --black:#000000;
+  --orange:#DDA74A;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+  body { 
+    margin: 0 auto !important; 
+    float: none !important; 
+    overflow-x: hidden;
+  }
+
+  html{
+    font-size: 100%;
+  }
+
+/*NAVBAR*/
+  .smaller-screen-navbar{
+    display: none;
+  }
+
+  .toggle-btn{
+   cursor: pointer;
+   display: none;
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+
+  }
+
+  .navbar__container{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    text-transform: uppercase;
+  }
+
+  .navbar__container a{
+    text-decoration: none;
+    color: var(--black);
+    font-family:"Brandon Grotesque, Bold";
+  }
+
+  #cart-notification {
+    color: var(--white);
+    background-color: var(--orange);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 100;
+    position: absolute;
+    top: 0.8rem;
+    right: 2.5rem;
+  }
+
+  /*HEADER*/
+  .header {
+    position: relative;
+    padding: 0 3rem;
+  }
+  
+  .header img{
+    max-width: 100%;
+    z-index: -5;
+  }
+
+ .header__text-content{
+   top: 50%;
+   left: 10%;
+   transform: translateY(-50%);
+   position: absolute;
+   max-width: 380px;
+  }
+
+  .header__text-content h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    font-family: "Chronicle Display Black";
+  }
+
+    .header__text-content p{
+      color: var(--white);
+      margin-top: 1rem;
+      line-height: 1.6;
+      font-family:"Brandon Gotesque, Light";
+      font-weight: 100;
+      font-size: 1.1rem;
+    }
+
+    .header-btn{
+      display: inline-block;
+      text-transform: uppercase;
+      background-color: var(--white);
+      padding: 1rem 2rem 1rem 2rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color:var(--darkgreen);
+      font-family:"Brandon Grotesque, Bold";
+      transition: 0.35s;
+    }
+
+    .header-btn:hover{
+      background-color: var(--whitesmoke);
+    }
+
+    /*MEET BIOM*/
+    .meet-biom__container{
+      background: url("/assets/Mask\ Group\ 12@2x.png");
+      min-height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .vertical__meet-biom-text{
+      position: absolute;
+      font-family:"Brandon Grotesque, Bold";
+      transform: rotate(90deg);
+      transform: rotate(-90deg);
+      color:var(--whitesmoke);
+      font-size: 10rem;
+      z-index: -1;
+      left: -15rem;
+      top: 0;
+      transition: 0.45s;
+    }
+
+    .vertical__meet-biom-text.active{
+      top: 16rem;
+    }
+
+    .meet-biom__text-content{
+      max-width: 490px;
+      margin-left: 45%;
+    }
+
+    .meet-biom__text-content h2{
+      font-size: 2rem;
+      line-height: 2;
+    }
+
+    .meet-biom__text-content h3{
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-family:"Brandon Grotesque, Regular";
+      color: var(--darkgreen);
+    }
+
+    .meet-biom__text-content p{
+      line-height: 1.6;
+      font-size: 1rem;
+      font-family:"Brandon Grotesque, Regular";
+    }
+
+    .biom-description{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .biom-description li{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family:"Brandon Grotesque, Regular";
+    }
+
+   .meet-biom-btn{
+     display: inline-block;
+     background: var(--darkgreen);
+     text-decoration: none;
+     max-width: 10rem;
+     color: var(--white);
+     border-radius: 8px;
+     padding: 0.8rem 2rem 0.8rem 2rem;
+     margin-top: 2rem;
+     text-transform: uppercase;
+     font-family:"Brandon Grotesque, Regular";
+     transition: 0.45s;
+   }
+    
+   .meet-biom-btn:hover{
+     background-color:var(--darkslateblack);
+   }
+
+
+   /*HORIZONTAL IMAGES*/
+  .horizontal-scroll__wrapper{
+    position: sticky;
+    top: 6vh;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  
+ .horizontal-scroll__title{
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%);
+   z-index: 5;
+ }
+
+ .horizontal-scroll__title h4{
+   color: var(--white);
+   text-transform: uppercase;
+   text-align: center;
+   font-family:"Brandon Grotesque, Regular";
+   font-weight: 100;
+ }
+
+ .horizontal-scroll__title h2{
+   text-align: center;
+   font-size: 3.5rem;
+   color: var(--white);
+ }
+
+ .horizontal-scroll__container{
+   display: flex;
+   align-items: center;
+   position: relative;
+ }
+
+ .horizontal-scroll-container__img {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  max-width: 45%;
+  min-width: 460px;
+  height: 35rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin: 1.5em 1em;
+  border-radius: 12px;
+  position: relative;
+  
+}
+
+.horizontal-scroll-container__img img{
+  max-width: 100%;
+  height: 100%;
+  transition: 0.45s ease-in-out;
+}
+
+.horizontal-scroll-container__img img:hover{
+  transform: scale(1.1);
+}
+
+.horizontal-scroll-container__img p{
+position: absolute;
+bottom: 2rem;
+left: 40%;
+color: var(--white);
+font-size: 1.6rem;
+z-index: 99;
+font-family:"Brandon Grotesque, Regular";
+opacity: 0;
+transition: 0.45s ease-in-out;
+}
+
+.horizontal-scroll-container__img:hover p{
+  opacity: 1;
+}
+
+/*BIOM DISPENSERS*/
+.vessel-choice{
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 4rem;
+  align-items: center;
+}
+
+.biom-dispensers__container{
+  display: flex;
+  position: relative;
+}
+
+.biom-dispensers__container img{
+  max-width: 350px;
+  max-height: 350px;
+  min-height: 180px;
+  min-width: 180px;
+  width: 100%;
+  height: auto;
+  transition: 0.25s;
+}
+
+.biom-dispensers__container img:hover{
+ transform: translate(15%);
+}
+
+.biom-dispenser{
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  justify-content: space-between;
+  
+}
+
+.biom-dispenser__text-content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-right: 8rem;
+  bottom: 0.5rem;
+  opacity: 0;
+  transition: 0.25s;
+  z-index: 99;
+ 
+}
+
+.biom-dispenser:hover .biom-dispenser__text-content{
+  opacity: 1;
+}
+
+.biom-dispenser__text-content h2{
+  font-size: 1.35vw;
+  font-family:"Brandon Grotesque, Regular";
+}
+
+.biom-dispenser__text-content p{
+  text-transform: uppercase;
+  font-family:"Brandon Grotesque, Regular";
+}
+
+.border-btn {
+  border: 2px solid var(--darkgreen);
+  padding: 0 0 0 0.9em;
+  border-radius: 6px;
+  font-family:"Brandon Grotesque, Regular";
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--darkgreen);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background: unset;
+  outline: none;
+  width: 23vw;
+  margin-bottom: 1rem;
+}
+.border-btn span {
+  padding: 1rem 0.9rem;
+  border-left: 2px solid var(--darkgreen);
+  margin-left: 0.5rem;
+  display: grid;
+  place-items: center;
+  transition: .2s;
+}
+
+.component-h1 {
+  font-family:"Brandon Grotesque, Regular";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  min-width: 18rem;
+}
+
+.choose-vessel__text-content button:hover img {
+  transform: translateX(3px);
+}
+
+  /*REVIEWS*/
+.reviews__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--whitesmoke);
+  min-height: 25rem;
+  gap: 1rem;
+}
+
+.reviews-text__container{
+  max-width: 700px;
+  text-align: center;
+  line-height: 6;
+}
+
+
+
+
+.reviews__container h2{
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family:"Brandon Grotesque, Regular";
+  color: var(--darkslateblack);
+  font-weight: 100;
+}
+
+.reviews-text__container p{
+  line-height: 1.6;
+  font-size: 1.4rem;
+  font-family: "Chronicle Display Black";
+}
+
+.reviews-text__container h5{
+  font-family:"Brandon Grotesque, Regular";
+    font-weight: 100;
+    color: var(--darkslateblack);
+  }
+  
+.review-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-dots span{
+  margin-left:.5rem;
+  width: 0.5rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--darkgreen);
+  cursor: pointer;
+}
+
+.review-dots span.active{
+  background: var(--darkgreen);
+  border: 1px solid transparent;
+}
+
+  
+/*BIOM WIPES*/
+.biom-wipes__container{
+  height: 40rem;
+  max-width: 1360px; 
+  margin:10rem auto !important; 
+  float: none !important; 
+  position: relative;
+}
+
+  .biom-wipes__background{
+    background: var(--lightseagreen);
+    width: 100%;
+    height: 35rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .biom-wipe__text-content{
+    max-width: 490px;
+    width: 40vw;
+    margin-right: 2rem; 
+  }
+
+  .biom-wipe__text-content h3{
+    text-transform: uppercase;
+    line-height: 2;
+    font-family:"Brandon Grotesque, Regular";
+    font-size: 1rem;
+  }
+
+  .biom-wipe__text-content h2{
+    font-size: 2rem;
+    line-height: 1.1;
+    font-family: "Chronicle Display Black";
+  }
+
+  .biom-wipe__text-content p{
+    line-height: 1.6;
+    font-family:"Brandon Grotesque, Regular";
+  }
+  
+  .biom-description img{
+    max-width: 3rem;
+    max-height:3rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .biom-wipe-btn{
+    display: inline-block;
+    background: var(--darkgreen);
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 3.2rem;
+    text-transform: uppercase;
+    font-family:"Brandon Grotesque, Regular";
+    transition: 0.45s;
+  }
+
+  .biom-wipe-btn:hover{
+    background-color: var(--darkslateblack);
+  }
+
+  .adobe-stock{
+    position: absolute;
+    bottom: 12%;
+    max-width: 496px;
+    max-height: 600px;
+    width: 40vw;
+    height: 100%;
+    max-height:100%
+  }
+  
+  .biom-package{
+    position: absolute;
+    bottom: 2rem;
+    left: 30%;
+    max-width: 16rem;
+    width: 20vw;
+  }
+  
+  /*VIDEO SECTION*/
+  .video-section__container{
+    height: 100vh;
+    position: relative;
+    max-width: 1360px; 
+    margin:10rem auto !important; 
+    float: none !important; 
+    
+  }
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    border-radius: 12px;
+  }
+
+  .video-section__text-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100vh;
+  }
+
+  .video-section__text-content h2{
+    color:var(--white);
+    font-size: 3rem;
+    font-family: "Chronicle Display Black";
+  }
+
+  .video-section__text-content h3{
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    line-height: 1;
+    font-family:"Brandon Grotesque, Regular";
+  }
+  
+  .video-section__text-content p{
+    max-width:650px;
+    color: var(--white);
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-family:"Brandon Grotesque, Regular";
+  }
+
+  .video-section-btn{
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--darkgreen);
+    text-transform: uppercase;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 4px;
+    font-family:"Brandon Grotesque, Regular";
+    transition: 0.45s;
+  }
+
+  .video-section-btn:hover{
+    background-color:var(--snow);
+  }
+
+  /*CLEAN WITH BIOM*/
+  .clean-with-biom__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .clean-with-biom__container h2{
+    text-align: center;
+    font-family: "Chronicle Display Black";
+    font-size: 3rem;
+    line-height: 3;
+  }
+  .clean-with-biom__container h2::first-letter{
+    font-weight: 100;
+  }
+
+  .biom-horizontal-images__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  
+
+
+  .biom-horizontal-images__container img{
+    min-width: 20vw;
+  }
+
+  .biom-horizontal-images__container img:nth-child(2n+2){
+    margin-top: 2rem;
+  }
+
+  .clean-biom-btn{
+      margin-left: auto;
+      margin-right: auto;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family:"Brandon Grotesque, Bold";
+      font-weight: 500;
+      border: 2px solid var(--darkgreen);
+      padding: 0 0 0 0.8em;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: var(--darkgreen);
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      background: unset;
+      outline: none;
+  }
+    .clean-biom-btn span {
+      padding: 1rem 0.9rem;
+      border-left: 2px solid var(--darkgreen);
+      margin-left: 0.5rem;
+      display: grid;
+      place-items: center; 
+      transition: 0.45s;
+  }
+
+  .clean-biom-btn span:hover{
+    background-color: var(--darkgreen);
+  }
+
+  .clean-biom-btn span:hover img{
+    filter: brightness(0) invert(1);
+  }
+
+  /*FOOTER*/
+  footer{
+    margin-top: 16rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-section__container{
+    background-image: url("assets/Biom_wipe_2.png");
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
+
+  .newsletter-section{
+    position: absolute;
+    top:-10rem;
+    background: var(--whitesmoke);
+    border-radius: 8px;
+    margin-inline:6rem ;
+    z-index: 1;
+    height: 19rem;
+    width:85%;
+  }
+
+  .newsletter__text-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    gap: 1rem;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .newsletter__text-content h2{
+    font-size: 2rem;
+    font-family: "Chronicle Display Black";
+  }
+
+  .newsletter__text-content p{
+    line-height: 1.6;
+    font-family:"Brandon Grotesque, Regular";
+  }
+
+  .newsletter-section__input{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .newsletter-section__input input{
+    border-radius: 4px;
+    outline: 0;
+    border: transparent;
+    padding: 1rem 2rem 1rem 2rem;
+    width: 100%;
+  }
+
+  ::placeholder {
+    font-size: 1rem;
+    font-family:"Brandon Grotesque, Bold";
+  }
+
+    .newsletter-section__input span{
+      position: absolute;
+      right: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 0.5rem 0.7rem ;
+      background-color: var(--darkgreen);
+    }
+
+    .newsletter-section__input span:hover{
+      background-color: var(--darkslateblack);
+    }
+
+    .newsletter-section__input span img:hover{
+      transform: translate(3px);
+    }
+
+      .newsletter-section__input span img{
+        transition: 0.25s;
+        filter:  brightness(0) invert(1);
+      }
+    
+  .green-footer{
+    background: var(--darkgreen) 0% 0% no-repeat;
+    opacity: 72%;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vw;
+    gap: 2rem;
+  }
+
+  .green-footer__container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 10%;
+  }
+
+  .green-footer hr{
+    margin-inline: 4rem;
+  }
+
+  .footer-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 3rem; 
+  }
+
+  .footer-navbar__container{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+  }
+
+  .footer-navbar__container a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family:"Brandon Grotesque, Bold";
+  }
+
+  .copyright-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 3rem;
+  }
+
+  .copyright-section ul{
+    display: flex;
+   
+  }
+
+  .copyright-section li{
+    margin: 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    font-family:"Brandon Grotesque, Regular";
+  }
+  
+  .social-links{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .media{
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .media img{
+    display: block;
+    margin: auto;
+    margin-top: 0.25rem;
+  }
+  
+ 
+  @media(max-width:900px) {
+    /*NAVBAR*/
+    .navbar{
+     display: flex;
+     flex-direction: column;
+    }
+
+    .navbar__container{
+      display: none;
+    }
+   .smaller-screen-navbar{
+     display: none;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     width: 100vw;
+   }
+
+   .smaller-screen-navbar.show{
+     display: flex;
+   }
+
+   .smaller-screen-navbar__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+   }
+   .smaller-screen-navbar__container a {
+     color: var(--black);
+     text-decoration: none;
+     font-size: 2rem;
+    
+   }
+
+   .smaller-screen-navbar__container a:last-child{
+     display: flex;
+     flex-direction: row;
+     gap: 1rem;
+   }
+
+   .toggle-btn{
+     display: inline-block;
+     position: absolute;
+     right: 2rem;
+     font-size: 2rem;
+   }
+
+   /*HEADER*/
+   .header__text-content h1{
+     font-size: 2rem;
+   }
+
+   .header__text-content p{
+     font-size: 1rem;
+   }
+
+   .header-btn{
+     padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+     border-radius: 4px;
+     margin-bottom: 1rem;
+   }
+
+   /*BIOM DISPENSERS*/
+   .vessel-choice{
+   display: flex;
+   flex-wrap: wrap;
+  }
+  
+  .choose-vessel__text-content {
+  margin-bottom: 2rem;
+  }
+  
+  .choose-vessel__text-content {
+  margin-inline: auto;
+  }
+
+  .biom-dispenser__text-content h2{
+    font-size: 1rem;
+  }
+  
+  .border-btn {
+   width: 100%;
+  }
+  
+  .border-btn span {
+    transform: rotate(90deg);
+    border-bottom: 1px solid var(--darkgreen);
+  }
+  
+  .component-h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /*BIOM WIPES*/
+  .biom-wipes{
+    margin-inline: 1rem;
+  }
+
+  /*VIDEO SECTION*/
+  .video-section{
+    margin-inline: 1rem;
+  }
+
+  .video-section__text-content h2{
+    text-align: center;
+  }
+
+  .biom-horizontal-images__container img{
+    width: 20vw;
+  }
+
+  /*FOOTER*/
+  .newsletter-section{
+    position: relative;
+    margin: auto;
+  }
+
+ .newsletter__text-content h2{
+   font-size: 1.4rem;
+ }
+ .newsletter__text-content p{
+   font-size: 1rem;
+   max-width: 15rem;
+ }
+.newsletter__text-content input{
+  margin-top: 1.5rem;
+}
+.newsletter-section__input span{
+  bottom: 0.4rem;
+}
+ 
+.green-footer{
+  margin-top: -9rem;
+  height:100%;
+  position: relative;
+}
+
+.footer-navbar{
+  flex-direction: column;
+}
+
+.footer-navbar__container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-navbar__container2{
+  margin-top: 3rem;
+}
+
+.footer-logo{
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.copyright-section{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.copyright ul{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright li{
+  font-size: 1.1rem;
+}
+}
+
+
+@media (max-width:600px) {
+
+  /*HEADER*/
+  .header{
+  background-image: url("assets/Kitchen_3@2x.png");
+  background-size: cover;
+  background-position:calc(100%-5%);
+  background-repeat: no-repeat;
+  background-position: calc(6vh - 4.4rem);
+  height: 42rem;
+  }
+
+  .header img{
+   display: none;
+  }
+
+    .header__text-content{
+     text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80vw;
+    }
+  
+  .header__text-content h1{
+    font-size: 3rem;
+  }
+
+  .header__text-content p{
+    font-size: 1rem;
+    color: var(--white);
+  }
+
+  .header-btn{
+    width: 100%;
+  }
+  /*MEET BIOM*/
+  .vertical__meet-biom-text{
+    display: none;
+  }
+
+  .meet-biom__text-content{
+    margin-left: auto;
+    margin-right:auto;
+    max-width: 20rem;
+  }
+
+  /*HORIZONTAL IMAGES*/
+
+  .horizontal-scroll-container__img p {
+    margin-bottom: -1.4rem;
+  }
+
+/*BIOM DISPENSERS*/
+  .biom-dispensers__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.biom-dispenser{
+  margin-top: 2rem;
+}
+
+.border-btn span {
+  transform: rotate(90deg);
+  border-bottom: 2px solid var(--darkgreen);
+}
+
+/*BIOM WIPES*/
+.biom-wipes{
+  margin: 0;
+}
+
+.biom-wipes__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.biom-wipes__background{
+  height: 100vh;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.biom-wipe__text-content{
+  min-width: 20rem;
+}
+
+.adobe-stock{
+  display: none;
+}
+
+.biom-package{
+  display: none;
+}
+
+/*VIDEO SECTION*/
+.video-section{
+  margin: 0;
+  
+}
+.video-section__text-content{
+  text-align: center;
+}
+
+#background-video{
+  border-radius: 0px;
+}
+
+/*CLEAN WITH BIOM*/
+.clean-with-biom__container{
+  margin-top: -5rem;
+}
+
+/*HORIZONTAL IMAGES*/
+.biom-horizontal-images__container img{
+  min-width: 10rem;
+}
+
+/*FOOTER*/
+.newsletter-section{
+  border-radius: 0px;
+  margin-bottom: -1rem;
+  width: 100%;
+}
+.newsletter-section__container{
+  background-size: cover;
+}
+
+.newsletter-section h2{
+  font-size: 2rem;
+}
+
+.newsletter-section__input{
+  right: 3%;
+  width: 100%;
+}
+}
