@@ -259,6 +259,7 @@ html{
     top: 6vh;
     overflow: hidden;
     margin-top: 2rem;
+   
   }
   
  .horizontal-scroll__title{
@@ -279,7 +280,7 @@ html{
 
  .horizontal-scroll__title h2{
    text-align: center;
-   font-size: 3.5rem;
+   font-size: 4.5rem;
    color: var(--white);
  }
 
@@ -293,9 +294,9 @@ html{
    display: flex;
    align-items: center;
    justify-content: space-between;
-  max-width: 45%;
+  max-width: 100%;
   min-width: 460px;
-  height: 35rem;
+  height: 40rem;
   flex-shrink: 0;
   overflow: hidden;
   margin: 1.5em 1em;
@@ -446,8 +447,12 @@ transition: 0.45s ease-in-out;
   line-height: 6;
 }
 
-
-
+.single-review:first-child{
+  display: block;
+}
+.single-review{
+  display: none;
+}
 
 .reviews__container h2{
   text-transform: uppercase;
@@ -477,8 +482,8 @@ transition: 0.45s ease-in-out;
 
 .review-dots span{
   margin-left:.5rem;
-  width: 0.5rem;
-  height: 0.6rem;
+  width: 0.6rem;
+  height: 0.7rem;
   border-radius: 50%;
   background: transparent;
   border: 1px solid var(--darkgreen);
